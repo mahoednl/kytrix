@@ -1,29 +1,169 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Obsolète</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            color: #333;
-            text-align: center;
-        }
-        .message {
-            font-size: 2rem;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kytrix IA Wiki</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #0d0d0d;
+        color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        background-color: #1a1a1a;
+        text-align: center;
+        padding: 20px;
+    }
+    header h1 {
+        color: #00ffff;
+        margin: 0;
+    }
+    nav {
+        background-color: #111;
+        padding: 10px;
+        text-align: center;
+    }
+    nav a {
+        color: #00ffff;
+        margin: 0 10px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    main {
+        max-width: 900px;
+        margin: auto;
+        padding: 20px;
+    }
+    .accordion {
+        background-color: #1a1a1a;
+        color: #00ffff;
+        cursor: pointer;
+        padding: 15px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 18px;
+        transition: background-color 0.3s;
+        margin-bottom: 5px;
+        border-radius: 5px;
+    }
+    .accordion:hover {
+        background-color: #333;
+    }
+    .panel {
+        padding: 0 15px;
+        background-color: #111;
+        display: none;
+        overflow: hidden;
+        border-left: 2px solid #00ffff;
+        border-right: 2px solid #00ffff;
+        border-bottom: 2px solid #00ffff;
+        border-radius: 0 0 5px 5px;
+    }
+    .panel p, .panel ul {
+        margin: 10px 0;
+    }
+    a.button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #00ffff;
+        color: #000;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 5px;
+        margin: 5px 0;
+    }
+    footer {
+        background-color: #111;
+        text-align: center;
+        padding: 15px;
+        border-top: 1px solid #00ffff;
+    }
+</style>
 </head>
 <body>
-    <div class="message">
-        Site obsolète, veuillez utiliser <a href="https://kytrix.fr" target="_blank">Kytrix.fr</a>
+
+<header>
+    <h1>Kytrix IA Wiki</h1>
+    <p>Le bot Discord intelligent pour une modération parfaite</p>
+</header>
+
+<nav>
+    <a href="#fonctionnalites">Fonctionnalités</a>
+    <a href="#installation">Installation</a>
+    <a href="#support">Support</a>
+</nav>
+
+<main>
+
+<section id="fonctionnalites">
+    <h2>Fonctionnalités</h2>
+
+    <button class="accordion">Système de Tickets</button>
+    <div class="panel">
+        <p>Gestion automatique des tickets avec interface intuitive et suivi complet.</p>
     </div>
+
+    <button class="accordion">No ping</button>
+    <div class="panel">
+        <p>Gestion automatique des rôles pour bloquer les mentions et éviter les pings indésirables.</p>
+    </div>
+
+    <button class="accordion">Chat IA</button>
+    <div class="panel">
+        <p>Intelligence artificielle conversationnelle pour interagir avec les utilisateurs.</p>
+    </div>
+
+    <button class="accordion">Warn & Ban</button>
+    <div class="panel">
+        <p>Système complet de sanctions avec historique et gestion automatique.</p>
+    </div>
+
+    <button class="accordion">Modération Complète</button>
+    <div class="panel">
+        <p>Tous les outils essentiels pour maintenir l'ordre sur le serveur.</p>
+    </div>
+
+    <button class="accordion">Performance</button>
+    <div class="panel">
+        <p>Réponse ultra-rapide et fiabilité 24h/24 pour votre serveur.</p>
+    </div>
+
+</section>
+
+<section id="installation">
+    <h2>Installation & Configuration</h2>
+    <p>Pour inviter Kytrix sur votre serveur Discord ou obtenir de l'aide, utilisez les liens officiels :</p>
+    <a class="button" href="https://kytrix.fr" target="_blank">Inviter Kytrix</a>
+    <a class="button" href="https://kytrix.fr" target="_blank">Rejoindre le Support</a>
+</section>
+
+<section id="support">
+    <h2>Support</h2>
+    <p>Pour toute aide ou question, rejoignez le serveur officiel :</p>
+    <a class="button" href="https://kytrix.fr" target="_blank">Support Kytrix</a>
+</section>
+
+</main>
+
+<footer>
+    © 2024 Kytrix. Bot Discord intelligent pour une modération parfaite.
+</footer>
+
+<script>
+    const accordions = document.getElementsByClassName("accordion");
+    for (let i = 0; i < accordions.length; i++) {
+        accordions[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            const panel = this.nextElementSibling;
+            panel.style.display = panel.style.display === "block" ? "none" : "block";
+        });
+    }
+</script>
+
 </body>
 </html>
